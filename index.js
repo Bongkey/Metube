@@ -12,6 +12,14 @@ const handleHome = (req, res) => res.send("Hello from home");
 //Profile로 route
 const handleProfile = (req, res) => res.send("You are on my profile");
 
+//middleWare
+const betweenHome = (req, res, next) => {
+  console.log('Between');
+  next();
+};
+
+//middleWare 실행
+app.use(betweenHome);
 
 app.get("/", handleHome);
 
