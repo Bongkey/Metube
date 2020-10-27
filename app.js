@@ -11,6 +11,8 @@ import routes from "./routes";
 
 const app = express();
 
+// view engine pug로 설정
+app.set('view engine', "pug");
 //middleWares
 app.use(cookieParser());
 app.use(bodyParser.json());
